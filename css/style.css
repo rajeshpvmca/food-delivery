@@ -420,13 +420,14 @@ body {
     padding: 12px 30px;
     border: none;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-main:hover {
-    background-color: #e64a19;
-    /* A darker shade of primary */
-    color: white;
+    background-color: var(--secondary);
+    color: #012d36; /* Using your dark theme color for text contrast on gold */
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 178, 44, 0.3);
 }
 
 /* Modern Food Cards */
