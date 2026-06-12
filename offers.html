@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Offers - Food Delivery</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/offers.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Banner Section for Offers Page -->
+    <section class="hero-banner-section offers-hero-bg position-relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative text-center" style="z-index: 3;">
+            <div class="hero-badge mb-3" data-aos="zoom-in">
+                <span class="text-uppercase letter-spacing-2">Don't Miss Out!</span>
+            </div>
+            <h1 class="display-2 fw-bold text-white mb-4 grand-title" data-aos="fade-up" data-aos-delay="100">
+                Unbeatable <span class="text-secondary italic-font">Deals</span> & Discounts
+            </h1>
+            <p class="lead text-white-50 mb-5 mx-auto hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Grab your favorite meals at prices you'll love. Limited time offers!
+            </p>
+            <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-chevron-down bounce"></i>
+            </div>
+        </div>
+        <!-- Decorative Divider -->
+        <div class="hero-shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.43,147.3,126,221.33,113.36,275.63,104.11,310.13,73.5,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Breadcrumb (moved to a separate section if needed, or removed) -->
+    <section class="py-3 bg-white">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+                    <li class="breadcrumb-item active text-secondary" aria-current="page">Offers</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Main Offers Content -->
+    <section class="py-5 bg-white">
+        <div class="container py-lg-5">
+            <!-- Promo Highlights -->
+            <div class="row g-4 mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="promo-banner shadow-sm rounded-4 overflow-hidden position-relative">
+                        <img src="./assets/images/banner.webp" alt="Promo" class="promo-bg">
+                        <div class="promo-overlay p-4 p-md-5 d-flex flex-column justify-content-center">
+                            <span class="badge bg-primary rounded-pill mb-3 w-fit">FLASH SALE</span>
+                            <h2 class="text-white fw-900 display-5">WEEKEND <br><span class="text-secondary">BONANZA</span></h2>
+                            <p class="text-white-50 lead">Get up to 50% off on all pizza orders this weekend.</p>
+                            <a href="menu.html" class="btn btn-main w-fit mt-3 px-4">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="promo-banner shadow-sm rounded-4 overflow-hidden position-relative combo-deal">
+                        <div class="promo-overlay p-4 p-md-5 d-flex flex-column justify-content-center bg-teal">
+                            <span class="badge bg-secondary text-dark rounded-pill mb-3 w-fit">BEST COMBO</span>
+                            <h2 class="text-white fw-900 display-5">BUY 1 GET 1 <br><span class="text-primary">FREE</span></h2>
+                            <p class="text-white-50 lead">On our signature Beef Burgers and Sides.</p>
+                            <a href="menu.html" class="btn btn-main w-fit mt-3 px-4">Claim Deal</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coupon Grid -->
+            <div class="section-title-wrapper text-center mb-5" data-aos="fade-up">
+                <span>Save More</span>
+                <h2 class="fw-bold">Active Coupon Codes</h2>
+                <div class="underline"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="coupon-card p-4 rounded-4 border-dashed text-center">
+                        <div class="coupon-icon mb-3"><i class="fas fa-percent"></i></div>
+                        <h4 class="fw-bold mb-1">First Order</h4>
+                        <p class="text-muted small">Valid on orders above $20</p>
+                        <div class="coupon-code-box mt-3 p-2 bg-light rounded-3 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-dark">WELCOME50</span>
+                            <button class="btn btn-sm btn-primary rounded-pill px-3 copy-btn">COPY</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="coupon-card p-4 rounded-4 border-dashed text-center">
+                        <div class="coupon-icon mb-3"><i class="fas fa-truck"></i></div>
+                        <h4 class="fw-bold mb-1">Free Delivery</h4>
+                        <p class="text-muted small">No minimum order required</p>
+                        <div class="coupon-code-box mt-3 p-2 bg-light rounded-3 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-dark">FREESHIP</span>
+                            <button class="btn btn-sm btn-primary rounded-pill px-3 copy-btn">COPY</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="coupon-card p-4 rounded-4 border-dashed text-center">
+                        <div class="coupon-icon mb-3"><i class="fas fa-utensils"></i></div>
+                        <h4 class="fw-bold mb-1">Office Lunch</h4>
+                        <p class="text-muted small">Get 20% off during 12pm - 3pm</p>
+                        <div class="coupon-code-box mt-3 p-2 bg-light rounded-3 d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-dark">LUNCHTIME</span>
+                            <button class="btn btn-sm btn-primary rounded-pill px-3 copy-btn">COPY</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Claim Section -->
+    <section class="py-5 bg-light">
+        <div class="container py-lg-5">
+            <div class="section-title-wrapper text-center mb-5" data-aos="fade-up">
+                <span>Simple Steps</span>
+                <h2 class="fw-bold">How To <span class="text-primary">Claim</span> Your Reward</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="row g-4 text-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card p-5">
+                        <div class="step-num mb-4">01</div>
+                        <h4 class="fw-bold">Copy the Code</h4>
+                        <p class="text-muted">Click the copy button on your preferred offer to save the coupon code to your clipboard.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card p-5">
+                        <div class="step-num mb-4">02</div>
+                        <h4 class="fw-bold">Select Your Meal</h4>
+                        <p class="text-muted">Browse our delicious menu and add your favorite gourmet dishes to your cart.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card p-5">
+                        <div class="step-num mb-4">03</div>
+                        <h4 class="fw-bold">Apply at Checkout</h4>
+                        <p class="text-muted">Paste the code during checkout to see your discount applied instantly! Enjoy your meal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script src="./js/script.js"></script>
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const code = this.previousElementSibling.innerText;
+                navigator.clipboard.writeText(code);
+                const originalText = this.innerText;
+                this.innerText = 'COPIED!';
+                this.classList.replace('btn-primary', 'btn-success');
+                setTimeout(() => {
+                    this.innerText = originalText;
+                    this.classList.replace('btn-success', 'btn-primary');
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

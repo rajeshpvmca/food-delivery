@@ -40,6 +40,31 @@ function setActiveNavLink() {
     });
 }
 
+function initMenuFilter() {
+    const filterBtns = document.querySelectorAll('.btn-filter');
+    const menuItems = document.querySelectorAll('.menu-item-wrap');
+
+    if (!filterBtns.length) return;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            menuItems.forEach(item => {
+                if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.style.display = 'block';
+                    item.classList.add('aos-animate');
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+}
+
 function initHeaderScroll() {
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -50,6 +75,8 @@ function initHeaderScroll() {
         }
     });
 }
+
+document.addEventListener('DOMContentLoaded', initMenuFilter);
 
 new Swiper(".testimonialSlider", {
 

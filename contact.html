@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Food Delivery</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <!-- Hero Banner Section for Contact Page -->
+    <section class="hero-banner-section contact-hero-bg position-relative overflow-hidden">
+        <div class="hero-overlay"></div>
+        <div class="container position-relative text-center" style="z-index: 3;">
+            <div class="hero-badge mb-3" data-aos="zoom-in">
+                <span class="text-uppercase letter-spacing-2">Get In Touch</span>
+            </div>
+            <h1 class="display-2 fw-bold text-white mb-4 grand-title" data-aos="fade-up" data-aos-delay="100">
+                We'd Love To <span class="text-secondary italic-font">Hear</span> From You
+            </h1>
+            <p class="lead text-white-50 mb-5 mx-auto hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Have questions, feedback, or just want to say hello? Reach out to us!
+            </p>
+            <div class="hero-scroll-indicator" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-chevron-down bounce"></i>
+            </div>
+        </div>
+        <!-- Decorative Divider -->
+        <div class="hero-shape-divider">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.43,147.3,126,221.33,113.36,275.63,104.11,310.13,73.5,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Breadcrumb (moved to a separate section if needed, or removed) -->
+    <section class="py-3 bg-white overflow-hidden">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+                    <li class="breadcrumb-item active text-secondary" aria-current="page">Contact Us</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="py-5 bg-white overflow-hidden">
+        <div class="container py-lg-5">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card text-center p-4 rounded-4 shadow-sm border-0 h-100">
+                        <div class="contact-icon-box mb-3"><i class="fas fa-map-marker-alt"></i></div>
+                        <h5 class="fw-bold">Our Location</h5>
+                        <p class="text-muted mb-0">123 Food Street, Gourmet City, NY 10001</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card text-center p-4 rounded-4 shadow-sm border-0 h-100">
+                        <div class="contact-icon-box mb-3"><i class="fas fa-phone-alt"></i></div>
+                        <h5 class="fw-bold">Phone Number</h5>
+                        <p class="text-muted mb-0">+1 234 567 890<br>+1 987 654 321</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card text-center p-4 rounded-4 shadow-sm border-0 h-100">
+                        <div class="contact-icon-box mb-3"><i class="fas fa-envelope"></i></div>
+                        <h5 class="fw-bold">Email Address</h5>
+                        <p class="text-muted mb-0">hello@foodie.com<br>support@foodie.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="contact-card text-center p-4 rounded-4 shadow-sm border-0 h-100">
+                        <div class="contact-icon-box mb-3"><i class="fas fa-clock"></i></div>
+                        <h5 class="fw-bold">Opening Hours</h5>
+                        <p class="text-muted mb-0">Mon - Sun: 10:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form and Map -->
+            <div class="row g-5 mt-5 pt-lg-4">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm">
+                        <h2 class="fw-bold mb-4">Send Us A <span class="text-primary">Message</span></h2>
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" placeholder="Subject">
+                                </div>
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-main px-5 py-3 rounded-pill w-100 w-md-auto">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="map-container h-100 rounded-4 overflow-hidden shadow-sm">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.241264871843!2d-73.98731968459377!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480293%3A0x5117f70619cdd488!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1654321098765!5m2!1sen!2sus" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 400px;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

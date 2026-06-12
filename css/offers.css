@@ -1,0 +1,7 @@
+/* Hero Banner Styling for Offers Page */
+.hero-banner-section.offers-hero-bg {
+    background-image: url('../assets/images/banner.webp'); /* Use your main banner image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
