@@ -104,8 +104,3 @@
     }
 }
 
-/* Making sure the header is visible over the error background */
-.navbar.fixed-top {
-    background: rgba(1, 45, 54, 0.95) !important;
-    backdrop-filter: blur(10px);
-}
