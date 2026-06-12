@@ -1,7 +1,152 @@
-/* Hero Banner Styling for Menu Page */
-.hero-banner-section.menu-hero-bg {
-    background-image: url('../assets/images/banner.webp'); /* Use your main banner image */
+/* Menu Specific Styles */
+.menu-hero-bg {
+    background-image: url('../assets/images/banner.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+.menu-search-box {
+    width: 300px;
+}
+
+.menu-search-box .form-control:focus {
+    box-shadow: 0 5px 15px rgba(255, 65, 18, 0.1);
+    border-color: var(--primary);
+}
+
+/* Category Filters */
+.menu-filter-container {
+    width: fit-content;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.btn-filter {
+    background: transparent;
+    color: #555;
+    border: none;
+    font-weight: 600;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.btn-filter.active {
+    background: var(--primary) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 15px rgba(255, 65, 18, 0.3);
+}
+
+.btn-filter:hover:not(.active) {
+    color: var(--primary);
+}
+
+/* Food Card Extensions */
+.food-meta span {
+    font-weight: 500;
+}
+
+.food-content h3 {
+    font-size: 24px !important;
+    margin-bottom: 10px !important;
+}
+
+/* Featured Dish Section */
+.floating-img {
+    animation: float 4s ease-in-out infinite;
+    max-height: 400px;
+}
+
+.price-bubble {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 100px;
+    background: var(--secondary);
+    color: #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 24px;
+    border: 5px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Farm to Table Process Styling */
+.farm-process-section {
+    background: linear-gradient(to bottom, #fdfdfd, #f4f7f8);
+    position: relative;
+}
+
+.process-step-card {
+    background: #fff;
+    padding: 50px 35px;
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    z-index: 1;
+}
+
+.process-step-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(1, 45, 54, 0.1);
+    border-color: var(--primary);
+}
+
+.process-icon {
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg, var(--primary), #ff6a45);
+    color: #fff;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 35px;
+    box-shadow: 0 15px 25px rgba(255, 65, 18, 0.2);
+    transition: 0.4s;
+}
+
+.icon-gradient-2 { background: linear-gradient(135deg, #012d36, #01414e); }
+.icon-gradient-3 { background: linear-gradient(135deg, var(--secondary), #ffc107); }
+.icon-gradient-4 { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+
+.process-step-card:hover .process-icon {
+    transform: rotate(10deg) scale(1.1);
+}
+
+.step-number-bg {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 80px;
+    font-weight: 900;
+    color: rgba(0,0,0,0.03);
+    line-height: 1;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+.process-step-card:hover .step-number-bg {
+    color: rgba(255, 65, 18, 0.08);
+    transform: scale(1.2);
+}
+
+@media (max-width: 991px) {
+    .process-step-card { margin-top: 0 !important; margin-bottom: 20px; }
+    .step-number-bg { font-size: 60px; }
+}
+
+@media (max-width: 768px) {
+    .menu-search-box { width: 100%; }
+    .menu-filter-container { width: 100%; border-radius: 20px; }
 }
