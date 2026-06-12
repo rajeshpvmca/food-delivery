@@ -96,21 +96,35 @@
                     <div class="contact-form-wrapper p-4 p-md-5 rounded-4 shadow-sm">
                         <h2 class="fw-bold mb-4">Send Us A <span class="text-primary">Message</span></h2>
                         <form id="contactForm">
-                            <div class="row g-3">
+                            <div class="row g-4">
                                 <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                    <div class="input-modern-wrap">
+                                        <i class="fas fa-user"></i>
+                                        <input type="text" class="form-control" placeholder="Your Name" required>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                    <div class="input-modern-wrap">
+                                        <i class="fas fa-envelope"></i>
+                                        <input type="email" class="form-control" placeholder="Your Email" required>
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <input type="text" class="form-control" placeholder="Subject">
+                                    <div class="input-modern-wrap">
+                                        <i class="fas fa-tag"></i>
+                                        <input type="text" class="form-control" placeholder="Subject">
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                    <div class="input-modern-wrap">
+                                        <i class="fas fa-comment-dots"></i>
+                                        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                                    </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="submit" class="btn btn-main px-5 py-3 rounded-pill w-100 w-md-auto">Send Message</button>
+                                    <button type="submit" class="btn btn-main px-5 py-3 rounded-pill w-100 w-md-auto shadow">
+                                        <span>Send Message</span> <i class="fas fa-paper-plane ms-2"></i>
+                                    </button>
                                 </div>
                             </div>
                         </form>

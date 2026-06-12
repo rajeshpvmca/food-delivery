@@ -1,7 +1,110 @@
-/* Hero Banner Styling for Contact Page */
-.hero-banner-section.contact-hero-bg {
-    background-image: url('../assets/images/banner.webp'); /* Use your main banner image */
+/* Contact Page Specific Styles */
+
+.contact-hero-bg {
+    background-image: url('../assets/images/banner.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+}
+
+/* Modern Info Cards */
+.contact-card {
+    background: #fff;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: 1px solid rgba(0,0,0,0.05) !important;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08) !important;
+    border-color: var(--primary) !important;
+}
+
+.contact-icon-box {
+    width: 70px;
+    height: 70px;
+    background: #fff5f2;
+    color: var(--primary);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    transition: all 0.4s ease;
+}
+
+.contact-card:hover .contact-icon-box {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Modern Form Inputs with Icons */
+.contact-form-wrapper {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.input-modern-wrap {
+    position: relative;
+}
+
+.input-modern-wrap i {
+    position: absolute;
+    left: 20px;
+    top: 18px;
+    color: #888;
+    transition: all 0.3s ease;
+    z-index: 5;
+    font-size: 14px;
+}
+
+.input-modern-wrap textarea ~ i {
+    top: 20px;
+}
+
+.input-modern-wrap .form-control {
+    padding: 15px 15px 15px 50px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    background: #fcfcfc;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+.input-modern-wrap .form-control:focus {
+    background: #fff;
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(255, 65, 18, 0.05);
+}
+
+.input-modern-wrap .form-control:focus ~ i {
+    color: var(--primary);
+}
+
+/* Map Styling */
+.map-container {
+    border: 1px solid rgba(0,0,0,0.05);
+    min-height: 450px;
+}
+
+.map-container iframe {
+    filter: grayscale(0.2) contrast(1.1);
+}
+
+/* Submit Button Animation */
+.btn-main span, .btn-main i {
+    vertical-align: middle;
+}
+
+.btn-main:hover i {
+    animation: paperPlaneSend 0.8s ease forwards;
+}
+
+@keyframes paperPlaneSend {
+    0% { transform: translate(0,0) scale(1); opacity: 1; }
+    50% { transform: translate(20px, -20px) scale(0.8); opacity: 0; }
+    51% { transform: translate(-20px, 20px) scale(0.8); opacity: 0; }
+    100% { transform: translate(0,0) scale(1); opacity: 1; }
 }
