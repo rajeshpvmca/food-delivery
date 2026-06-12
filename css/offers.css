@@ -1,6 +1,6 @@
 /* Offers Hero Background */
 .offers-hero-bg {
-    background-image: url('../assets/images/offer-bg.webp');
+    background-image: url('../assets/images/banner.webp');
     background-size: cover;
     background-position: center;
 }
