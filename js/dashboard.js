@@ -37,6 +37,14 @@ links.forEach(link => {
     link.addEventListener('click', e => {
         e.preventDefault();
         const page = link.dataset.page;
+        const href = link.getAttribute('href');
+
+        // Redirect to index if tab has no value or target
+        if (!page || href === "#" || href === "") {
+            window.location.href = 'index.html';
+            return;
+        }
+
         frame.src = link.href;
         sessionStorage.setItem('dashPage', page);
         links.forEach(a => a.classList.remove('active'));
