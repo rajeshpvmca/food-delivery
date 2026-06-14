@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Login</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/error.css">
+
+    <style>
+        body {
+            background-color: #012d36;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .auth-card {
+            background: rgba(255, 255, 255, 0.03) !important;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3) !important;
+            color: white;
+        }
+
+        .auth-card {
+            overflow: hidden;
+        }
+
+        .auth-image-side {
+            background: url('./assets/images/gl-3.webp') center/cover no-repeat;
+            position: relative;
+            min-height: 100%;
+            height: 100%;
+        }
+
+        .auth-image-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(1, 45, 54, 0.2), rgba(1, 45, 54, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 3rem;
+        }
+
+        .modern-role-selector {
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+        }
+
+        .role-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .role-item i {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: var(--secondary);
+        }
+
+        .btn-check:checked + .role-item {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 65, 18, 0.2);
+        }
+
+        .btn-check:checked + .role-item i {
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="error-page-body">
+
+    <!-- Background Elements similar to 404 -->
+    <div class="particle-overlay"></div>
+    
+    <div class="floating-icons d-none d-md-block">
+        <i class="fas fa-pizza-slice icon-1"></i>
+        <i class="fas fa-hamburger icon-2"></i>
+        <i class="fas fa-drumstick-bite icon-3"></i>
+        <i class="fas fa-ice-cream icon-4"></i>
+    </div>
+
+    <div class="container position-relative" style="z-index: 5;">
+        <div class="row justify-content-center">
+            <div class="col-lg-11 col-xl-10">
+                <div class="auth-card rounded-5" data-aos="zoom-in">
+                    <div class="row g-0">
+                        <!-- Left: Image Side -->
+                        <div class="col-lg-6 d-none d-lg-block">
+                            <div class="auth-image-side">
+                                <div class="auth-image-overlay">
+                                    <a href="index.html" class="mb-4">
+                                        <img src="assets/images/logoStackly.webp" alt="Logo" style="height: 60px; filter: brightness(0) invert(1);">
+                                    </a>
+                                    <h2 class="display-5 fw-bold text-white">Deliciously Fast</h2>
+                                    <p class="lead text-white-50">Sign in to explore gourmet meals from your favorite local kitchens.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Form Side -->
+                        <div class="col-lg-6 p-4 p-lg-5">
+                             <div class="text-center mb-4">
+                    <a href="index.html" class="text-secondary small text-decoration-none"><i class="fas fa-arrow-left me-2"></i> Back to Home</a>
+                </div>
+                          
+                            
+                            <div class="text-center text-lg-start mb-4">
+                                <h2 class="fw-bold text-white">Welcome Back!</h2>
+                                <p class="text-white-50">Login to order your favorite gourmet meals.</p>
+                            </div>
+
+                            <form id="loginForm">
+                                <label class="form-label fw-bold text-white-50 mb-2">I am a</label>
+                                <div class="modern-role-selector mb-4">
+                                    <input type="radio" class="btn-check" name="loginRole" id="roleFoodie" value="Foodie" checked autocomplete="off">
+                                    <label class="role-item" for="roleFoodie">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>Foodie</span>
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="loginRole" id="roleDelivery" value="Delivery" autocomplete="off">
+                                    <label class="role-item" for="roleDelivery">
+                                        <i class="fas fa-motorcycle"></i>
+                                        <span>Delivery</span>
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="loginRole" id="roleAdmin" value="Admin" autocomplete="off">
+                                    <label class="role-item" for="roleAdmin">
+                                        <i class="fas fa-user-cog"></i>
+                                        <span>Admin</span>
+                                    </label>
+                                </div>
+
+                                <label class="form-label fw-bold text-white-50">Email Address</label>
+                                <input class="form-control mb-3 bg-dark border-secondary text-white" type="email" id="loginEmail" placeholder="name@foodie.com" required>
+
+                                <label class="form-label fw-bold text-white-50">Password</label>
+                                <div class="input-group mb-3">
+                                    <input class="form-control bg-dark border-secondary text-white" type="password" id="loginPassword" placeholder="Enter password" minlength="8" required>
+                                    <button class="btn btn-outline-secondary toggle-password" type="button">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Strength bar -->
+                                <div class="mb-1" style="height:4px;border-radius:4px;background:rgba(255,255,255,0.1);overflow:hidden;">
+                                    <div id="strengthBar" style="height:100%;width:0;transition:width 0.3s, background 0.3s;"></div>
+                                </div>
+                                <div class="mb-3"></div>
+
+                                <div class="d-flex justify-content-between align-items-center mb-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="remember">
+                                        <label class="form-check-label small text-white-50" for="remember">Remember Me</label>
+                                    </div>
+                                    <a href="404.html" class="text-secondary small text-decoration-none">Forgot Password?</a>
+                                </div>
+
+                                <button class="btn btn-main w-100 mb-3 py-3 fw-bold shadow-lg">Login to Account</button>
+                                
+                                <p class="text-center mb-0 small text-white-50">Don't have an account? <a href="signup.html" class="text-secondary fw-bold text-decoration-none">Register Now</a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        });
+
+        // Live password strength
+        const pwdInput  = document.getElementById('loginPassword');
+        const bar       = document.getElementById('strengthBar');
+        const rules = {
+            'r-len':   v => v.length >= 8,
+            'r-upper': v => /[A-Z]/.test(v),
+            'r-num':   v => /[0-9]/.test(v),
+            'r-sym':   v => /[^A-Za-z0-9]/.test(v)
+        };
+        const colors = ['#ef4444','#f97316','#eab308','#22C55E'];
+        const labels = ['Weak','Fair','Good','Strong'];
+
+        pwdInput.addEventListener('input', () => {
+            const v = pwdInput.value;
+            let passed = 0;
+            Object.values(rules).forEach(fn => {
+                if (fn(v)) passed++;
+            });
+            bar.style.width = (passed / 4 * 100) + '%';
+            bar.style.background = colors[passed - 1] || 'rgba(255,255,255,0.1)';
+            bar.title = labels[passed - 1] || '';
+        });
+    </script>
+
+</body>
+
+</html>
