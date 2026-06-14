@@ -17,6 +17,7 @@ document.getElementById('navAdmin').style.display    = role === 'Admin'    ? '' 
 // Signout
 document.getElementById('signoutBtn').addEventListener('click', () => {
     localStorage.removeItem('loggedInUser');
+    sessionStorage.removeItem('dashPage');
     window.location.href = 'index.html';
 });
 
@@ -24,14 +25,19 @@ document.getElementById('signoutBtn').addEventListener('click', () => {
 const frame = document.getElementById('dashFrame');
 const links = document.querySelectorAll('.sidebar-nav a');
 
+// Define default pages for each role
+const roleDefaults = {
+    'Foodie': 'home',
+    'Delivery': 'tasks',
+    'Admin': 'adminOverview'
+};
+
 // Restore last page
-const lastPage = sessionStorage.getItem('dashPage');
-if (lastPage) {
-    frame.src = 'dashboard/' + lastPage + '.html';
-    links.forEach(a => {
-        a.classList.toggle('active', a.dataset.page === lastPage);
-    });
-}
+const lastPage = sessionStorage.getItem('dashPage') || roleDefaults[role];
+frame.src = 'dashboard/' + lastPage + '.html';
+links.forEach(a => {
+    a.classList.toggle('active', a.dataset.page === lastPage);
+});
 
 links.forEach(link => {
     link.addEventListener('click', e => {
@@ -39,13 +45,14 @@ links.forEach(link => {
         const page = link.dataset.page;
         const href = link.getAttribute('href');
 
-        // Redirect to index if tab has no value or target
+        // Redirect to index only if it's truly a placeholder link
         if (!page || href === "#" || href === "") {
             window.location.href = 'index.html';
             return;
         }
 
-        frame.src = link.href;
+        // Update the iframe source to the link's href
+        frame.src = href;
         sessionStorage.setItem('dashPage', page);
         links.forEach(a => a.classList.remove('active'));
         link.classList.add('active');
