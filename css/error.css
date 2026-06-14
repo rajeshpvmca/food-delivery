@@ -69,6 +69,12 @@
 .icon-2 { top: 20%; right: 15%; animation: float 8s ease-in-out infinite 1s; }
 .icon-3 { bottom: 20%; left: 15%; animation: float 7s ease-in-out infinite 0.5s; }
 .icon-4 { bottom: 15%; right: 10%; animation: float 9s ease-in-out infinite 1.5s; }
+.icon-5 { top: 45%; left: 5%; animation: float 7.5s ease-in-out infinite 2s; }
+.icon-6 { top: 60%; right: 5%; animation: float 6.5s ease-in-out infinite 0.8s; }
+.icon-7 { bottom: 40%; right: 12%; animation: float 8.5s ease-in-out infinite 1.2s; }
+.icon-8 { bottom: 10%; left: 25%; animation: float 7s ease-in-out infinite 2.5s; }
+.icon-9 { top: 8%; right: 35%; animation: float 6s ease-in-out infinite 3s; }
+.icon-10 { bottom: 30%; left: 8%; animation: float 9s ease-in-out infinite 0.3s; }
 
 @keyframes rotateSlow {
     from { transform: rotate(0deg); }
@@ -103,4 +109,3 @@
         font-size: 2rem !important;
     }
 }
-
