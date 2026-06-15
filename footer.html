@@ -32,19 +32,20 @@
                 <div class="col-lg-3 col-md-6 footer-widget">
                     <h5>Newsletter</h5>
                     <p class="text-white-50 small mb-3">Subscribe to get the latest updates and delicious offers.</p>
-                    <div class="newsletter-box">
-                        <input type="email" class="form-control" placeholder="Email Address">
-                        <button class="btn btn-main w-100">Subscribe</button>
-                    </div>
+                    <form id="newsletterForm" action="404.html"class="newsletter-box">
+                        <input type="email" id="newsletterEmail" class="form-control" placeholder="Email Address" required>
+                        <button type="submit" class="btn btn-main w-100">Subscribe</button>
+                    </form>
                 </div>
 
                 <!-- Contact Widget -->
                 <div class="col-lg-3 col-md-6 footer-widget">
                     <h5>Contact Us</h5>
                     <ul class="footer-links">
-                        <li><span class="text-primary me-2"><i class="fas fa-map-marker-alt"></i></span> 55 Main Street, 2nd Floor, Chennai, India</li>
-                        <li><span class="text-primary me-2"><i class="fas fa-phone-alt"></i></span> +91 9876543210</li>
-                        <li><span class="text-primary me-2"><i class="fas fa-envelope"></i></span> stacklysupport@gamil.com</li>
+                        <li><span class="text-primary me-2"><i class="fas fa-map-marker-alt"></i></span> <a href="https://maps.google.com/?q=55+Main+Street+Chennai" target="_blank" 
+                           class=" text-decoration-none">55 Main Street, Chennai</a></li>
+                        <li><span class="text-primary me-2"><i class="fas fa-phone-alt"></i></span> <a href="tel:+91 9876543210" class="text-decoration-none">+91 9876543210</a></li>
+                        <li><span class="text-primary me-2"><i class="fas fa-envelope"></i></span> <a href="mailto:stacklysupport@gmail.com" class=" text-decoration-none">stacklysupport@gmail.com</a></li>
                     </ul>
                 </div>
             </div>
