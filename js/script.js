@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('header-placeholder').innerHTML = data;
             setActiveNavLink(); // Apply the active state to the menu
             initHeaderScroll(); // Initialize scroll effect after loading
+            // Initialize filter if we are on the menu page
+            if (document.querySelector('.btn-filter')) initMenuFilter();
         })
         .catch(error => console.error('Error loading header:', error));
 
@@ -32,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 2500); // 2.5 seconds delay added here
         }
     });
+
+    // Initialize Counters
+    if (document.querySelectorAll('.counter').length) {
+        initCounters();
+    }
 });
 
 function setActiveNavLink() {
@@ -87,8 +94,6 @@ function initHeaderScroll() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', initMenuFilter);
-
 new Swiper(".testimonialSlider", {
 
     loop:true,
@@ -140,3 +145,35 @@ galleryModal.addEventListener('show.bs.modal', function (event) {
     document.getElementById('galleryModalImg').src = imageSrc;
 
 });
+
+// Counter Animation Logic
+function initCounters() {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 2000; // Animation duration in milliseconds
+
+    const startCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        let startTimestamp = null;
+
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / speed, 1);
+            el.innerText = Math.floor(progress * target);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounter(entry.target);
+                observer.unobserve(entry.target); // Animate only once
+            }
+        });
+    }, { threshold: 0.5 });
+
+    counters.forEach(counter => observer.observe(counter));
+}

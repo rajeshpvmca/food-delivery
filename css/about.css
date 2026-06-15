@@ -48,18 +48,26 @@
 
 /* Stats Styling */
 .stats-section {
-    background-color: #012d36;
-    background-image: linear-gradient(45deg, #012d36 0%, #01414e 100%);
+    background: #012d36 url('../assets/images/offer-bg.webp') center/cover no-repeat;
+    background-attachment: fixed;
     position: relative;
     overflow: hidden;
+    padding: 100px 0;
 }
 
 .stat-item {
-    transition: transform 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .stat-item:hover {
-    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-10px);
+    border-color: var(--secondary);
 }
 
 .stat-item h2 {
@@ -147,24 +155,59 @@
 
 /* Mission Cards */
 .mission-card {
-    transition: 0.3s;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    border: none !important;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    padding: 60px 40px !important;
 }
 
 .mission-card:hover {
-    transform: scale(1.02);
+    transform: translateY(-15px);
+    box-shadow: 0 40px 80px rgba(1, 45, 54, 0.1) !important;
+}
+
+.mission-card::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0.03;
+    z-index: -1;
+    transition: 0.6s;
+}
+
+.mission-card:hover::before {
+    transform: scale(1.5);
+    opacity: 0.05;
 }
 
 .icon-circle {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    border-radius: 24px; /* Modern squircle */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
 }
 
-.bg-primary-light { background: rgba(255, 65, 18, 0.1); color: var(--primary); }
+.mission-card:hover .icon-circle {
+    transform: rotateY(180deg);
+    background: var(--primary) !important;
+    color: #fff !important;
+}
+
+.bg-primary-light { background: #fff5f2; color: var(--primary); }
 .bg-secondary-light { background: rgba(255, 178, 44, 0.1); color: var(--secondary); }
 
 /* CTA Section */
