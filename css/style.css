@@ -119,16 +119,33 @@ body {
     }
 
     .navbar-collapse {
-        background: rgba(1, 45, 54, 0.98);
-        margin-top: 10px;
-        padding: 20px;
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        background: #012d36;
+        position: fixed;
+        top: 70px; 
+            left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        margin: 0;
+        padding: 40px 25px;
+        border-radius: 0;
+        border: none;
+        text-align: center;
+        overflow-y: auto;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 0;
+            visibility: hidden;
+            display: block !important; /* Overrides Bootstrap's display:none to allow transitions */
+        }
+
+        .navbar-collapse.show {
+            left: 0;
+            opacity: 1;
+            visibility: visible;
     }
 
     .navbar .nav-link {
-        padding: 12px 15px;
+        padding: 18px 0;
+        font-size: 1.2rem;
         border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
