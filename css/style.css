@@ -109,8 +109,38 @@ body {
 /* Responsive tweaks for the floating header */
 @media (max-width: 991px) {
     .navbar.fixed-top {
-        width: calc(100% - 20px);
-        margin: 10px auto;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        background: #012d36 !important; /* Solid background for mobile */
+        padding: 10px 0;
+        border: none !important;
+    }
+
+    .navbar-collapse {
+        background: rgba(1, 45, 54, 0.98);
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+
+    .navbar .nav-link {
+        padding: 12px 15px;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .navbar .nav-link.active::after {
+        display: none; /* Hide underline animation on mobile for better UI */
+    }
+
+    .btn-main.ms-lg-3 {
+        margin-top: 15px;
+        margin-left: 0 !important;
+        width: 100%;
+        text-align: center;
     }
 }
 
