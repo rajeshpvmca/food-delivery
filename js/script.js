@@ -21,6 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('footer-placeholder').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
+
+    // Preloader Logic
+    window.addEventListener('load', function() {
+        const preloader = document.querySelector('.preloader');
+        if (preloader) {
+            setTimeout(() => {
+                preloader.classList.add('fade-out');
+                setTimeout(() => preloader.remove(), 600);
+            }, 2500); // 2.5 seconds delay added here
+        }
+    });
 });
 
 function setActiveNavLink() {
