@@ -148,8 +148,6 @@
                 <a href="dashboard/profile.html" class="nav-item-dash" data-page="profile"><i class="fas fa-user"></i> Profile</a>
                 <a href="dashboard/settings.html" class="nav-item-dash" data-page="settings"><i class="fas fa-cog"></i> Settings</a>
             </div>
-            <hr class="text-white-50">
-            <a href="#" id="signoutBtn" class="nav-item-dash text-danger"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
         </div>
     </div>
 
@@ -163,6 +161,9 @@
                     <div class="text-muted" style="font-size: 0.7rem;" id="navUserEmail">email@example.com</div>
                 </div>
                 <div class="user-avatar" id="userAvatar">U</div>
+                <button class="btn btn-sm btn-outline-danger rounded-pill px-2 px-md-3 ms-2" id="signoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> <span class="d-none d-md-inline ms-1">Sign Out</span>
+                </button>
             </div>
         </header>
         <iframe src="dashboard/home.html" id="dashFrame"></iframe>
@@ -178,6 +179,7 @@
             const overlay = document.getElementById('sidebarOverlay');
             const dashFrame = document.getElementById('dashFrame');
             const navItems = document.querySelectorAll('.nav-item-dash');
+            const signoutBtn = document.getElementById('signoutBtn');
             const roleBadge = document.getElementById('roleBadge');
 
             // Load User Data
@@ -206,19 +208,19 @@
             // Iframe Navigation & Active States
             navItems.forEach(item => {
                 item.addEventListener('click', function(e) {
-                    if (this.id === 'signoutBtn') {
-                        localStorage.removeItem('loggedInUser');
-                        sessionStorage.removeItem('dashPage');
-                        window.location.href = 'index.html';
-                        return;
-                    }
-
                     e.preventDefault();
                     navItems.forEach(nav => nav.classList.remove('active'));
                     this.classList.add('active');
                     dashFrame.src = this.getAttribute('href');
                     if (window.innerWidth < 992) toggleSidebar();
                 });
+            });
+
+            // Sign Out Logic
+            signoutBtn?.addEventListener('click', () => {
+                localStorage.removeItem('loggedInUser');
+                sessionStorage.removeItem('dashPage');
+                window.location.href = 'index.html';
             });
         });
     </script>
